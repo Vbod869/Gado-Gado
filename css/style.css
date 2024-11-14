@@ -32,6 +32,10 @@ body {
     line-height: 1.6;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 section {
     padding: 8rem 9%;
 }
