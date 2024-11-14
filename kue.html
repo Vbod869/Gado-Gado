@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makanan Ringan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1000;">
+        <div id="closed-message" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; padding: 20px;">
+            Maaf, kami hanya buka pada bulan puasa.
+            <p>silahkan hubungi admin.</p>
+            <p>+62 895-1614-9031</p>
+        </div>
+    </div>
+
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-utensils"></i> Makanan Ringan </a>
+
+        <nav class="navbar">
+            <a href="index.html">beranda</a>
+            <a href="#menu">menu</a>
+            <a href="#contact">kontak</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+
+        </div>
+    </header>
+
+
+    <section class="menu" id="menu">
+        <h1 class="heading"> Menu <span>Makanan</span> </h1>
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://lh7-us.googleusercontent.com/docsz/AD_4nXcEnIB-sPoEV8QUrcThuBvYTaKqrfmLbkjgKG3v7Cw3AuE2bwe_djcEGwMQL489-VcdqSKSYcDLm7T0prghWC-tea751_7RDds9Fo0qbGc7kfxor_wvZThIk54l8aoDgWUN-uuwddsL73iAQXtkAAwunBY?key=rUuxa2qkyxjqRPvYImfPtw" alt="Kue Nastar">
+                <h3>nastar</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">Rp40.000</div>
+                <a class="btn" onclick="addToOrder('Kue Nastar', 40000)">tambah ke pesanan</a>
+            </div>
+            
+
+            <div class="box">
+                <img src="https://cdn0-production-images-kly.akamaized.net/_EN-UaPnB24gKkW-ZpaFmlMJoZ8=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3131206/original/038804000_1589771006-shutterstock_1147305941.jpg" alt="Kue Nastar">
+                <h3>good time</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">Rp35.000</div>
+                <a class="btn" onclick="addToOrder('good time', 35000)">tambah ke pesanan</a>
+            </div>
+
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0phfk2ploqWvCmLY5JRAtv2-uTKZSKJ6gpg&s" alt="Kue Nastar">
+                <h3>putri salju</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">Rp40.000</div>
+                <a class="btn" onclick="addToOrder('putri salju', 40000)">tambah ke pesanan</a>
+            </div>
+
+            <div class="box">
+                <img src="https://asset.kompas.com/crops/tNLT8i5QKhfKnYzRoiWlWFGlY-E=/0x0:697x465/1200x800/data/photo/2021/05/01/608cd097eedc9.jpeg" alt="Kue Nastar">
+                <h3>kripik bawang</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">Rp15.000</div>
+                <a class="btn" onclick="addToOrder('Kripik bawang', 15000)">tambah ke pesanan</a>
+            </div>
+
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLExdZbbz6y8mzxtTrLyewXpBlyhCcX0Y6eQ&s" alt="">
+                <h3>stick bawang</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">Rp14.000</div>
+                <a class="btn" onclick="addToOrder('stick bawang', 14000)">tambah ke pesanan</a>
+            </div>
+
+            <div class="box">
+                <img src="https://cdn.idntimes.com/content-images/community/2022/03/resep-telur-gabus-resep-camilan-mudah-resep-camilan-enak-telur-gabus-keju-9cde86371d7fc78c91ae80a6ffab250e-236dd6ab66412a85249c39d16a0003f4_600x400.jpg" alt="Kue Nastar">
+                <h3>telor gabus renyah keju</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">Rp16.000</div>
+                <a class="btn" onclick="addToOrder('telor gabus reyah keju', 16000)">tambah ke pesanan</a>
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <h2>Ringkasan Pesanan</h2>
+            <div id="order-summary"></div>
+            <input type="text" id="customer-name" placeholder="Masukkan nama Anda" required>
+            <button id="send-order" class="btn">Kirim Pesanan</button>
+        </div>
+    </div>
+
+    <!-- Modal Notifikasi -->
+    <div id="notification-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p>Apakah Anda yakin ingin mengirim pesanan ini?</p>
+            <button id="confirm-send" class="confirm-button">Ya, Kirim</button>
+            <button id="cancel-send" class="cancel-button">Batal</button>
+        </div>
+    </div>
+
+    <section class="contact" id="contact">
+        <h1 class="heading"> <span>hubungi</span> kami </h1>
+        <div class="row">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.3776062669901!2d106.86660892838218!3d-6.327839999602199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed087a8f612b%3A0xa5cb6192032db072!2sJl.%20H.%20Marjuki%2040-66%2C%20RT.9%2FRW.8%2C%20Susukan%2C%20Kec.%20Ciracas%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2013750!5e0!3m2!1sid!2sid!4v1731489256980!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+            <form action="">
+                <h3>kirim pesan</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="nama">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="email">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="nomor telepon">
+                </div>
+                <input type="submit" value="hubungi sekarang" class="btn">
+            </form>
+        </div>
+    </section>
+
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3><i class="fas fa-utensils"></i>Makanan Ringan</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +123-456-7890</a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> makananringan@gmail.com</a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Jakarta Timur, Indonesia</a>
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#">my order</a>
+                <a href="#">my favorite</a>
+                <a href="#">my wishlist</a>
+                <a href="#">my account</a>
+                <a href="#">terms or use</a>
+            </div>
+
+            <div class="box">
+                <h3>useful links</h3>
+                <a href="#">menu</a>
+                <a href="#">location</a>
+                <a href="#">events & promotions</a>
+                <a href="#">FAQs</a>
+                <a href="#">contact us</a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <form action="">
+                    <input type="email" placeholder="enter your email">
+                    <input type="submit" value="subscribe" class="btn">
+                </form>
+            </div>
+
+        </div>
+
+        <div class="credit"> created by <span>mhmdarya_11</span> | all rights reserved! </div>
+
+    </section>
+
+    <script src="js/kue.js"></script>
+
+</body>
+</html>

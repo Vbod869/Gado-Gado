@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Makanan via WhatsApp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 1000;">
+        <div id="closed-message" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; padding: 20px;">
+            Maaf, kami tutup. Kembali buka Jam 10:00 - 16:00.
+        </div>
+    </div>
+    
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-utensils"></i> Gado-Gado </a>
+
+        <nav class="navbar">
+            <a href="#home">beranda</a>
+            <a href="#menu">menu</a>
+            <a href="kue.html">kue</a>
+            <a href="#about">tentang</a>
+            <a href="#contact">kontak</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="cart-btn" class="fas fa-shopping-cart"></div>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Gado-Gado</h3>
+            <p>
+                "Bingung mau makan apa? Coba Gado-Gado yang segar dan penuh cita rasa, solusi lezat buat hari ini!
+            </p>
+            <a href="#menu" class="btn">pesan sekarang</a>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <h1 class="heading"> menu <span>kami</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="https://akcdn.detik.net.id/visual/2017/10/18/fedd2600-3d99-4202-9dd0-6f33c12f75a2_169.jpg?w=720&q=90" alt="Gado-gado">
+                <h3>gado-gado</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star-half-alt"></i>
+                </div>
+                <div class="price">Rp14.000</div>
+                <div class="spicy-level">
+                    <label for="gado-gado-spicy" class="spicy-label">Tingkat Kepedasan:</label>
+                    <select id="gado-gado-spicy" class="spicy-select">
+                        <option value="Biasa">Biasa</option>
+                        <option value="Sedang">Sedang</option>
+                        <option value="Pedas">Pedas</option>
+                    </select>
+                </div>
+                <a class="btn" onclick="addToOrder('Gado-gado', 14000, 'gado-gado-spicy')">tambah ke pesanan</a>
+            </div>
+
+            
+
+            
+
+            <div class="box">
+                <img src="https://akcdn.detik.net.id/visual/2017/10/18/fedd2600-3d99-4202-9dd0-6f33c12f75a2_169.jpg?w=720&q=90" alt="Gado-gado">
+                <h3>gado-gado + lontong</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">Rp16.000</div>
+                <div class="spicy-level">
+                    <label for="gado-gado-lontong-spicy" class="spicy-label">Tingkat Kepedasan:</label>
+                    <select id="gado-gado-lontong-spicy" class="spicy-select">
+                        <option value="Biasa">Biasa</option>
+                        <option value="Sedang">Sedang</option>
+                        <option value="Pedas">Pedas</option>
+                    </select>
+                </div>
+                <a class="btn" onclick="addToOrder('Gado-gado + lontong', 16000, 'gado-gado-lontong-spicy')">tambah ke pesanan</a>
+            </div>
+
+
+            <div class="box">
+                <img src="https://akcdn.detik.net.id/visual/2017/10/18/fedd2600-3d99-4202-9dd0-6f33c12f75a2_169.jpg?w=720&q=90" alt="Gado-gado">
+                <h3>gado-gado + telor</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">Rp17.000</div>
+                <div class="spicy-level">
+                    <label for="gado-gado-telor-spicy" class="spicy-label">Tingkat Kepedasan:</label>
+                    <select id="gado-gado-telor-spicy" class="spicy-select">
+                        <option value="Biasa">Biasa</option>
+                        <option value="Sedang">Sedang</option>
+                        <option value="Pedas">Pedas</option>
+                    </select>
+                </div>
+                <a class="btn" onclick="addToOrder('Gado-gado + telor', 17000, 'gado-gado-telor-spicy')">tambah ke pesanan</a>
+            </div>
+
+
+            <div class="box">
+                <img src="https://akcdn.detik.net.id/visual/2017/10/18/fedd2600-3d99-4202-9dd0-6f33c12f75a2_169.jpg?w=720&q=90" alt="Gado-gado">
+                <h3>gado-gado komplit</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">Rp19.000</div>
+                <div class="spicy-level">
+                    <label for="gado-gado-komplit-spicy" class="spicy-label">Tingkat Kepedasan:</label>
+                    <select id="gado-gado-komplit-spicy" class="spicy-select">
+                        <option value="Biasa">Biasa</option>
+                        <option value="Sedang">Sedang</option>
+                        <option value="Pedas">Pedas</option>
+                    </select>
+                </div>
+                <a class="btn" onclick="addToOrder('Gado-gado komplit', 19000, 'gado-gado-komplit-spicy')">tambah ke pesanan</a>
+            </div>            
+            
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h1 class="heading"> <span>tentang</span> kami </h1>
+        <div class="row">
+            <div class="image">
+                <img src="images/why.png" alt="Tentang Kami">
+            </div>
+            <div class="content">
+                <h3>mengapa memilih kami?</h3>
+                <p>Kami adalah UMKM yang berkomitmen untuk menyajikan makanan lezat dengan bahan-bahan berkualitas tinggi. Setiap hidangan kami dibuat dengan cinta dan perhatian khusus untuk memastikan pengalaman kuliner terbaik bagi pelanggan kami.</p>
+                <a href="#menu" class="btn">pesan sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1 class="heading"> <span>hubungi</span> kami </h1>
+        <div class="row">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.3776062669901!2d106.86660892838218!3d-6.327839999602199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed087a8f612b%3A0xa5cb6192032db072!2sJl.%20H.%20Marjuki%2040-66%2C%20RT.9%2FRW.8%2C%20Susukan%2C%20Kec.%20Ciracas%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2013750!5e0!3m2!1sid!2sid!4v1731489256980!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+            <form action="">
+                <h3>kirim pesan</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="nama">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="email">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="nomor telepon">
+                </div>
+                <input type="submit" value="hubungi sekarang" class="btn">
+            </form>
+        </div>
+    </section>
+
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <h2>Ringkasan Pesanan</h2>
+            <div id="order-summary"></div>
+            <input type="text" id="customer-name" placeholder="Masukkan nama Anda" required>
+            <button id="send-order" class="btn">Kirim Pesanan</button>
+        </div>
+    </div>
+
+    <!-- Modal Notifikasi -->
+    <div id="notification-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p>Apakah Anda yakin ingin mengirim pesanan ini?</p>
+            <button id="confirm-send" class="confirm-button">Ya, Kirim</button>
+            <button id="cancel-send" class="cancel-button">Batal</button>
+        </div>
+    </div>
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3><i class="fas fa-utensils"></i> Gado-Gado</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +123-456-7890</a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> gadogado@gmail.com</a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Jakarta Timur, Indonesia</a>
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#">my order</a>
+                <a href="#">my favorite</a>
+                <a href="#">my wishlist</a>
+                <a href="#">my account</a>
+                <a href="#">terms or use</a>
+            </div>
+
+            <div class="box">
+                <h3>useful links</h3>
+                <a href="#">menu</a>
+                <a href="#">location</a>
+                <a href="#">events & promotions</a>
+                <a href="#">FAQs</a>
+                <a href="#">contact us</a>
+            </div>
+
+            <div class="box">
+                <h3>newsletter</h3>
+                <p>subscribe for latest updates</p>
+                <form action="">
+                    <input type="email" placeholder="enter your email">
+                    <input type="submit" value="subscribe" class="btn">
+                </form>
+                <img src="images/payment.png" class="payment" alt="">
+            </div>
+
+        </div>
+
+        <div class="credit"> created by <span>mhmdarya_11</span> | all rights reserved! </div>
+
+    </section>
+
+
+   <script src="js/script.js"></script>
+
+</body>
+</html>
