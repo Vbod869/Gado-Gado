@@ -74,7 +74,7 @@ let navbar = document.querySelector('.navbar');
         });
         message += `\nTotal: Rp${totalHarga}`;
         
-        let whatsappUrl = `https://wa.me/62895358165040?text=${encodeURIComponent(message)}`;
+        let whatsappUrl = `https://wa.me/6289516149031?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     }
 
