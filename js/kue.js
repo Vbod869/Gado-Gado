@@ -101,7 +101,7 @@ let navbar = document.querySelector('.navbar');
 
         // Define the opening and closing times in minutes since midnight
         const openingTimeInMinutes = 10 * 60; // 09:00
-        const closingTimeInMinutes = 10 * 60; // 13:00
+        const closingTimeInMinutes = 20 * 60; // 13:00
 
         // Check if the current time is outside of opening hours
         if (currentTimeInMinutes < openingTimeInMinutes || currentTimeInMinutes >= closingTimeInMinutes) {

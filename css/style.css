@@ -197,6 +197,16 @@ section {
     margin: 1rem 0;
 }
 
+
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 15px;
+    margin-left: 10px;
+    
+}
+
 .about .row {
     display: flex;
     flex-wrap: wrap;
