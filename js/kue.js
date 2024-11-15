@@ -101,7 +101,7 @@ let navbar = document.querySelector('.navbar');
 
         // Define the opening and closing times in minutes since midnight
         const openingTimeInMinutes = 10 * 60; // 09:00
-        const closingTimeInMinutes = 10 * 60; // 13:00
+        const closingTimeInMinutes = 16 * 60; // 13:00
 
         // Check if the current time is outside of opening hours
         if (currentTimeInMinutes < openingTimeInMinutes || currentTimeInMinutes >= closingTimeInMinutes) {
@@ -116,3 +116,24 @@ let navbar = document.querySelector('.navbar');
 
     // Set interval to check every minute (60000 ms)
     setInterval(checkOpeningHours, 60000);
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("access-modal").style.display = "block";
+    });
+
+    function checkPassword() {
+        const password = document.getElementById("password-input").value;
+        const correctPassword = "camilankita"; // Set your actual password here
+        if (password === correctPassword) {
+            document.getElementById("access-modal").style.display = "none";
+        } else {
+            document.getElementById("error-message").style.display = "block";
+        }
+    }
+
+     window.addEventListener("beforeunload", function (event) {
+        if (!sessionStorage.getItem("authenticated")) {
+            event.preventDefault();
+            return "Harap masukkan password terlebih dahulu.";
+        }
+    });
