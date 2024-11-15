@@ -65,18 +65,24 @@ let navbar = document.querySelector('.navbar');
             alert("Pesanan Anda kosong!");
             return;
         }
-
+    
+        const notes = document.getElementById('order-notes').value; // Ambil catatan
         let message = `Pesanan untuk: ${customerName}\n\n`;
         let totalHarga = 0;
+    
         orderList.forEach((order, index) => {
             message += `${index + 1}. ${order.name} - Rp${order.price} (${order.spicyLevel})\n`;
             totalHarga += order.price;
         });
+    
         message += `\nTotal: Rp${totalHarga}`;
-        
+        if (notes.trim()) {
+            message += `\n\nCatatan: ${notes}`; // Tambahkan catatan jika ada
+        }
+    
         let whatsappUrl = `https://wa.me/6289516149031?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
-    }
+    }    
 
     window.onclick = function(event) {
         const orderModal = document.getElementById('order-modal');
